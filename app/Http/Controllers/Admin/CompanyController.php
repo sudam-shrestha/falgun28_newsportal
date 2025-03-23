@@ -40,7 +40,7 @@ class CompanyController extends Controller
             "email" => "required|email",
             "contact" => "required|numeric|digits:10",
             "address" => "required|max:255",
-            "logo" => "required|mimes:jpg,png,jpeg,gif,svg,avif|max:2048",
+            "logo" => "required|mimes:jpg,png,jpeg,gif,svg,avif,webp|max:2048",
         ]);
 
         $company = new Company();
@@ -88,7 +88,7 @@ class CompanyController extends Controller
             "email" => "required|email",
             "contact" => "required|numeric|digits:10",
             "address" => "required|max:255",
-            "logo" => "nullable|mimes:jpg,png,jpeg,gif,svg,avif|max:2048",
+            "logo" => "nullable|mimes:jpg,png,jpeg,gif,svg,avif,webp|max:2048",
         ]);
 
         $company = Company::find($id);
