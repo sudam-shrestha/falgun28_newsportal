@@ -77,23 +77,6 @@
                                 </div>
 
                                 <div class="mb-3 col-6">
-                                    <label for="status">Update Status</label>
-                                    <select name="status" id="status" class="form-control">
-                                        <option value="pending" {{ $article->status == 'pending' ? 'selected' : '' }}>
-                                            Pending</option>
-                                        <option value="approved"
-                                            {{ $article->status == 'approved' ? 'selected' : '' }}>Approved</option>
-                                        <option value="rejected"
-                                            {{ $article->status == 'rejected' ? 'selected' : '' }}>Rejected</option>
-                                    </select>
-                                    @error('status')
-                                        <div class="text-danger">
-                                            {{ $message }}
-                                        </div>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-3 col-6">
                                     <label for="image">Image</label>
                                     <input type="file" name="image" id="image" class="form-control">
                                     @error('image')

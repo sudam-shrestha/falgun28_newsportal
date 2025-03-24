@@ -89,6 +89,7 @@ class ArticleController extends Controller
         $article->content = $request->content;
         $article->meta_keywords = $request->meta_keywords;
         $article->meta_description = $request->meta_description;
+        $article->status = $request->status;
         $file = $request->image;
         if ($file) {
             $filename = time() . '.' . $file->getClientOriginalExtension();
@@ -106,6 +107,9 @@ class ArticleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $article = Article::find($id);
+        $article->delete();
+        toast('Company Deleted Successfully', 'success');
+        return redirect()->route('admin.article.index');
     }
 }
