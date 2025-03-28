@@ -1,4 +1,4 @@
-<x-frontend-layout>
+<x-frontend-layout :title="$article->title" :key_words="$article->meta_keywords" :description="$article->meta_description">
     <section>
         <div class="container">
             <div class="grid grid-cols-12">
@@ -15,6 +15,10 @@
 
                     <div class="text-justify custom">
                         {!! $article->content !!}
+                    </div>
+                    <div class="sharethis-inline-share-buttons"></div>
+                    <div class="fb-comments" data-href="http://127.0.0.1:8000/article/{{ $article->id }}" data-width=""
+                        data-numposts="5">
                     </div>
                 </div>
 

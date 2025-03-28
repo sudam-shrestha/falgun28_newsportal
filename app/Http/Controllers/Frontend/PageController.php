@@ -29,7 +29,7 @@ class PageController extends BaseController
     {
         $category = Category::where('slug', $slug)->first();
         $articles = $category->articles()->paginate(10);
-        return view('frontend.category', compact('articles'));
+        return view('frontend.category', compact('articles','category'));
     }
 
     public function article($id)

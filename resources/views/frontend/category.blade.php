@@ -1,4 +1,4 @@
-<x-frontend-layout>
+<x-frontend-layout :title="$category->eng_title" :key_words="$category->meta_keywords" :description="$category->meta_description">
     <section>
         <div class="container">
             <div class="grid grid-cols-12">

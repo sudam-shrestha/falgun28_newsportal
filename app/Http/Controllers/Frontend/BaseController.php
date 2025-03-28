@@ -14,7 +14,7 @@ class BaseController extends Controller
     public function __construct()
     {
         $company = Company::first();
-        $categories = Category::all();
+        $categories = Category::orderBy('position','asc')->get();
         $advertises = Advertise::where('expire_date', '>', now())->get();
 
         View::share([
